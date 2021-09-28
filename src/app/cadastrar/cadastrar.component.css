@@ -1,0 +1,29 @@
+#img-cadastro{
+  background-image: url(../../assets/img/imagemCadastrar.jpg);
+  min-height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+}
+
+#titulo {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #707070;
+  color: #F8F9FA;
+  font-weight: bold;
+}
+
+.cor-fundo {
+  background-color: #00B894;
+  border-radius: 20px;
+}
+
+.cor-fonte {
+  color: #F8F9FA;
+  font-weight: bold;
+}
+
+.sombra-botao {
+  box-shadow: 1px 1px 5px #000;
+}
