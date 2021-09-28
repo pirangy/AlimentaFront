@@ -1,4 +1,4 @@
-# AlimentaFront
+<div align="center"># AlimentaFront</div>
 
 <div align="center">
   <sub> Projeto proposto pela Generation Brasil - Uma Rede Social de conexão entre Ongs que precisam de alimento e empresas fornecedoras por meio de doações.
