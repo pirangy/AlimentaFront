@@ -8,7 +8,7 @@
 }
 
 #titulo {
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #707070;
   color: #F8F9FA;
   font-weight: bold;
@@ -25,5 +25,5 @@
 }
 
 .sombra-botao {
-  box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.16);
 }
