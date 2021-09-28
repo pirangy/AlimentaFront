@@ -1,4 +1,26 @@
-# AlimentaFront
+<div align="center"> <h1>Alimenta </h1></div>
+
+<div align="center">
+  <sub> Projeto proposto pela Generation Brasil - Uma Rede Social de conexão entre Ongs que precisam de alimento e empresas fornecedoras por meio de doações.
+Construido com  diligência por 
+<a href="https://github.com/AnaPaulaSouzaDias">Ana Paula</a>,
+<a href="https://github.com/HenriqueUriel">Henrique Uriel</a>,
+<a href="https://github.com/pirangy">Ariel Pirangy</a>,
+<a href="https://github.com/stefanitosi2">Stefani Tosi</a>,
+<a href="https://github.com/talita032">Talita Gleice</a>
+  </sub>
+</div>
+
+# :computer: Tecnologias
+Este projeto usou as seguintes tecnologias
+
+* [Java]   
+* [Spring Boot]   
+* [Spring Security]   
+* [Postgree SQL]  
+* [Html]   
+* [Css]   
+* [JavaScript] 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
