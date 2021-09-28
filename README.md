@@ -1,4 +1,4 @@
-<div align="center"> <h1>AlimentaFront </h1></div>
+<div align="center"> <h1>Alimenta </h1></div>
 
 <div align="center">
   <sub> Projeto proposto pela Generation Brasil - Uma Rede Social de conexão entre Ongs que precisam de alimento e empresas fornecedoras por meio de doações.
