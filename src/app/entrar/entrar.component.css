@@ -1,0 +1,50 @@
+#img-bg{
+    background-image: url('https://i.imgur.com/zxsJpGQ.png');
+
+    min-height: 950px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form-box{
+
+    background-color:#00B894;
+    border-radius: 20px;
+
+}
+
+p{
+    font-family: Raleway;
+    color: #F8F9FA;
+}
+
+#form-titulo{
+    font-family: Raleway;
+    color: #F8F9FA;
+
+}
+
+#cnpj{
+    font-family: Raleway;
+    color: #F8F9FA;
+}
+
+#info-cnpj{
+
+    font-family: Raleway;
+    color:#E2E6EA;
+    font-size: small;
+
+}
+
+#senha{
+    font-family: Raleway;
+    color: #F8F9FA;
+}
+
+#entrar{
+    font-family: Raleway;
+    
+}
