@@ -14,18 +14,18 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  entrar(userLogin: UserLogin):Observable<UserLogin> {
+  entrar(userLogin: UserLogin): Observable<UserLogin> {
     return this.http.post<UserLogin>('https://alimentagen.herokuapp.com/usuarios/logar', userLogin)
   }
 
-  cadastrar(user: User):Observable<User> {
+  cadastrar(user: User): Observable<User> {
     return this.http.post<User>('https://alimentagen.herokuapp.com/usuarios/cadastrar', user)
   }
 
-  logado(){
+  logado() {
     let ok: boolean = false
 
-    if(environment.token != ''){
+    if (environment.token != '') {
       ok = true
     }
 
