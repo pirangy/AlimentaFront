@@ -1,7 +1,7 @@
 <!--Central-->
 <div class="container-fluid">
 
-  <div class="row bg-info d-flex align-items-center ">
+  <div class="row cor-fundo d-flex align-items-center ">
     <div class="col-md-6">
       <div class="row d-flex justify-content-center">
         <div class="col-md-6 text-white">
@@ -33,17 +33,17 @@
   <nav>
     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
 
-      <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab"
+      <a class="nav-item nav-link active text-dark font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab"
         href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">
         Todas as Postagens
       </a>
 
-      <a (click)='findByIdUSer()' class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab"
+      <a (click)='findByIdUSer()' class="nav-item nav-link text-dark font-weight-bold" id="nav-minhasPostagens-tab"
         data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">
         Minhas Postagens
       </a>
 
-      <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab"
+      <a class="nav-item nav-link text-dark font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab"
         href="#postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">
         Postagens por Tema
       </a>
@@ -57,6 +57,14 @@
   <div class="tab-content mt-5" id="myTabContent">
 
     <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+   
+   <div class="row d-flex justify-content-center mt-5 mb-5">
+     <div class="col-md-4">
+        <div class="form-group">
+    <input type="text" class="form-control" id="titulo" placeholder="Pesquisando por um titulo de uma postagem?" [(ngModel)]="tituloPost" (keyup)='findByTituloPostagem()'>
+       </div>
+     </div>
+  </div>
 
       <div class="card-columns">
         <div class="card text-center" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
@@ -92,6 +100,15 @@
 
     <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
 
+      <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-4">
+           <div class="form-group">
+       <input type="text" class="form-control" id="titulo" placeholder="Pesquise um tema" [(ngModel)]="nomeTema" (keyup)='findByNomeTema()'>
+          </div>
+        </div>
+     </div>
+   
+
       <div class="card-columns" *ngFor='let tema of listaTemas'>
         <div class="card text-center" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
           <div class="card-body">
@@ -103,20 +120,13 @@
           </div>
         </div>
       </div>
-
-
     </div>
-
   </div>
-
 </div>
 <!--/Cards-->
 
-
 <!--/Tabs-->
 <!--/Visualização de Postagens-->
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
