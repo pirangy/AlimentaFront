@@ -1,53 +1,183 @@
-<div class="container-fluid">
+<!--navbar-->
+<nav class="navbar navbar-expand-lg cor-fundo">
+    <h6 class="navbar-brand mt-2 text-white">ALIMENTA</h6>
+      <h2 class="mr-3 font-weight-bold">|</h2>
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-warning font-weight-bold" href="#txtvideo">Quem Somos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-warning font-weight-bold" href="#card">Missão, Visão e Valores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning font-weight-bold" href="#parceiro">Parceiro</a>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link text-warning font-weight-bold" routerLink='/cadastrar'>Faça Parte</a>
+        </li>
 
-    <div class="row d-flex align-items-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-warning font-weight-bold" href="" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Fundadores</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-warning font-weight-bold" href="https://www.linkedin.com/in/henrique-uriel/"
+            target="_blank">Henrique Uriel</a>
+            <a class="dropdown-item text-warning font-weight-bold" href="https://www.linkedin.com/in/arielpirangy/"
+            target="_blank">Ariel Pirangy</a>
+            <a class="dropdown-item text-warning font-weight-bold" href="https://www.linkedin.com/in/anapaulasouzadias/"
+            target="_blank">Ana Souza</a>
+            <a class="dropdown-item text-warning font-weight-bold" href="https://www.linkedin.com/in/stefani-tosi-35b655140/"
+            target="_blank">Stefani Tosi</a>
+            <a class="dropdown-item text-warning font-weight-bold" href=""
+            target="_blank">Talita</a>
 
-        <div class="col-md-6">
+          </div>
+        </li>
+      </ul>
 
-
-            <div class="container shadow" style="max-width: 40rem" id="form-box">
-
-                <div class="row d-flex justify-content-center">
-
-                    <div class="col-md-6 text-white">
-                        <h1 class="text-center font-weight-bold mt-5" id="form-titulo">Entrar</h1>
-                        <div class="form-group">
-                            <label for="usuario" id="usuario" class="font-weight-bold text-white">Login</label>
-                            <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario"
-                                id="usuario" placeholder="Digite seu usuário">
-                            <div>
-                                <p id="info-cnpj">Seus dados não serão compartilhados.</p>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="font-weight-bold" for="senha">Senha</label>
-                            <input [(ngModel)]='userLogin.senha' class="form-control " type="password"
-                                name="senha" id="senha" placeholder="Sua senha">
-                        </div>
-
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-success btn-lg shadow-sm mt-1" (click)='entrar()'
-                                id='entrar'>Entrar</button>
-                        </div>
-
-                        <hr class="mt-5 mb-5">
-
-                        <p class="text-center mb-5">É sua primeira vez aqui?<a routerLink='/cadastrar'>Cadastre-se.</a>
-                        </p>
-
-                    </div>
-                </div>
-
-            </div>
-
+      <form class="form-inline d-flex justify-content-end">
+        <div class="form-group">
+            <label for="usuario" id="usuario" class="ml-2 font-weight-bold text-white">Login</label>
+            <input [(ngModel)]='userLogin.usuario' class="form-control ml-2" type="text" name="usuario"
+                id="usuario" placeholder="Digite seu usuário">
         </div>
 
-        <div class="col-md-6 mb-3" id="img-bg"></div>
+        <div class="form-group ml-2">
+            <label class="font-weight-bold text-white" for="senha">Senha</label>
+            <input [(ngModel)]='userLogin.senha' class="form-control ml-2" type="password"
+                name="senha" id="senha" placeholder="Sua senha">
+        </div>
 
-
-
+        <div>
+            <button type="submit" class="btn btn-warning ml-2 font-weight-bold text-white" (click)='entrar()'
+                id='entrar'>Entrar</button>
+        </div>
+      </form>
     </div>
+  </nav>
+  <!--/navbar-->
 
+  <!--fotos-->
+  <div class="img">
+    <img class="w-100"src="../../assets/img/doacao.jpg" />
+    <div>
+      <img src="../../assets/img/gente_que_alimenta-1.png" alt="">
+    </div>
+  </div>
+  <!--/fotos-->
 
-</div>
+  <!--jumbotron-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-success font-italic">Alimenta</h1>
+      <p class="lead text-primary font-tam">Unindo propósitos e salvando vidas!</p>
+    </div>
+  </div>
+  <!--/jumbotron-->
+
+  <!--texto e video-->
+  <div class="container">
+  <div class="row mt-5 mb-5" id="txtvideo">
+    <div class="col-md-6">
+        <h3 class="text-success">Quem é a Alimenta?</h3>
+        <p>
+          Lorem ipsum commodo tempor mollis arcu placerat curabitur ipsum sodales, senectus non orci eu at turpis felis platea, morbi vitae dolor ut auctor vel felis pellentesque. lorem cubilia id ut fames sagittis auctor odio elit, vel fermentum sollicitudin eu augue molestie neque nisi inceptos, condimentum in hendrerit eros nostra sodales lacinia. venenatis sem neque nisl vel hac convallis cubilia, nisl tellus amet tempor lacinia congue sagittis luctus, aptent sit tellus consequat curabitur elit. porttitor leo dictum tempus condimentum felis turpis varius etiam sit, facilisis in mollis integer quis fermentum eleifend feugiat, ut tempus gravida at nam fermentum convallis arcu.
+        </p>
+    </div>
+        <div class="col-md-6">
+          <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/zIGfdV58v2I"
+          title="YouTube video player" frameborder="0" allow="accelerometer;
+          autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+  </div>
+  </div>
+  <!--/texto e video-->
+
+  <!--cards-->
+  <div class="container">
+    <div class="card-group border border-warning" id="card">
+     <div class="card">
+       <img class="card-img-top" src="../../assets/img/missao.png"
+       alt="missao">
+       <div class="card-body bg-light">
+         <h5 class="card-title text-success">Missão</h5>
+         <p class="card-text">
+          Lorem ipsum commodo tempor mollis arcu placerat curabitur ipsum sodales, senectus non orci eu at turpis felis platea, morbi vitae dolor ut auctor vel felis pellentesque. lorem cubilia id ut fames sagittis auctor odio elit, vel fermentum sollicitudin eu augue molestie neque nisi inceptos, condimentum in hendrerit eros nostra sodales lacinia.
+         </p>
+       </div>
+     </div>
+     <div class="card">
+       <img class="card-img-top" src="../../assets/img/visao.png"
+       alt="visao">
+       <div class="card-body bg-light">
+         <h5 class="card-title text-success">Visão</h5>
+         <p class="card-text">
+          Lorem ipsum commodo tempor mollis arcu placerat curabitur ipsum sodales, senectus non orci eu at turpis felis platea, morbi vitae dolor ut auctor vel felis pellentesque. lorem cubilia id ut fames sagittis auctor odio elit, vel fermentum sollicitudin eu augue molestie neque nisi inceptos, condimentum in hendrerit eros nostra sodales lacinia.
+         </p>
+       </div>
+     </div>
+     <div class="card">
+       <img class="card-img-top" src="../../assets/img/valores.png"
+       alt="valores">
+       <div class="card-body bg-light">
+         <h5 class="card-title text-success">Valores</h5>
+         <p class="card-text">
+          Lorem ipsum commodo tempor mollis arcu placerat curabitur ipsum sodales, senectus non orci eu at turpis felis platea, morbi vitae dolor ut auctor vel felis pellentesque. lorem cubilia id ut fames sagittis auctor odio elit, vel fermentum sollicitudin eu augue molestie neque nisi inceptos, condimentum in hendrerit eros nostra sodales lacinia.
+         </p>
+       </div>
+     </div>
+   </div>
+  </div>
+  <!--/cards-->
+
+  <!--parceiro-->
+  <div class="container bg-light border border-warning mt-5">
+    <div class="row mt-5 mb-5" id="parceiro">
+      <div class="col-md-6">
+          <h3 class="text-success">Parceiro</h3>
+          <p>
+            Lorem ipsum commodo tempor mollis arcu placerat curabitur ipsum sodales, senectus non orci eu at turpis felis platea, morbi vitae dolor ut auctor vel felis pellentesque. lorem cubilia id ut fames sagittis auctor odio elit, vel fermentum sollicitudin eu augue molestie neque nisi inceptos, condimentum in hendrerit eros nostra sodales lacinia. venenatis sem neque nisl vel hac convallis cubilia, nisl tellus amet tempor lacinia congue sagittis luctus, aptent sit tellus consequat curabitur elit. porttitor leo dictum tempus condimentum felis turpis varius etiam sit, facilisis in mollis integer quis fermentum eleifend feugiat, ut tempus gravida at nam fermentum convallis arcu.
+          </p>
+      </div>
+          <div class="col-md-6">
+            <img src="../../assets/img/genn.jpg" alt="">
+          </div>
+    </div>
+  </div>
+    <!--/parceiro-->
+
+    <!--rodape-->
+    <footer class="page-footer font-small pt-4 mt-5 cor-fundo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center">
+            <h4 class="text-light">Siga-nos nas redes sociais</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center">
+              <ul class="social-network">
+                    <li>
+                        <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank" class="icoLinkedIn">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                      <a href="https://github.com/pirangy/AlimentaFront" target="_blank" class="icoGithub">
+                        <i class="fa fa-github-square"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright  bg-dark text-center py-3">
+        <span class="text-warning font-weight-bold"> © 2021 Copyright: Grupo 1</span>
+      </div>
+    </footer>
+    <!--/rodape-->
