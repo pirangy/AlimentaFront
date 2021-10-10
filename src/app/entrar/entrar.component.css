@@ -14,7 +14,6 @@
   border-radius: 20pt;
 }
 
-
 .font-tam {
   font-size: 30px;
 }
@@ -73,4 +72,9 @@ ul.social-network li{
 
 .font-raleway{
   font-family: Raleway;
+}
+
+.font-menu{
+  font-family: Raleway;
+  font-size: 20px;
 }
