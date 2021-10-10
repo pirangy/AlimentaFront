@@ -1,13 +1,39 @@
 ::ng-deep body {
-  background-color: #7ae4cf;
+  background-color: #f5f6fa;
 }
+
+.cor-login{
+  background-color: #0984e3;
+}
+
+.cor-cadastro{
+  background-color: #00b894;
+}
+
+.borda-btn{
+  border-radius: 20pt;
+}
+
 
 .font-tam {
-  font-size: 40px;
+  font-size: 30px;
 }
 
-.cor-fundo{
-  background-color: #00B894;
+.borda-texto{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2f3542;
+  }
+
+.cor-nav{
+  background-color: #2ed573;
+}
+
+.cor-pipe{
+  color: #2f3542;
+}
+
+.cor-jumbo{
+  background-color: #1abc9c;
 }
 
 div.img {
@@ -39,8 +65,12 @@ ul.social-network li{
   padding: 10px;
 }
 .fa-linkedin:hover{
-    color:blue;
+    color:#00a8ff;
 }
 .fa-github-square:hover{
-  color: black;
+  color: #2f3640;
+}
+
+.font-raleway{
+  font-family: Raleway;
 }
