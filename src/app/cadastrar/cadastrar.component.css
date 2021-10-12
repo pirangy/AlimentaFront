@@ -1,6 +1,6 @@
 #img-cadastro{
   background-image: url(../../assets/img/imagemCadastrar.jpg);
-  min-height: 800px;
+  min-height: 650px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,4 +26,8 @@
 
 .sombra-botao {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.16);
+}
+
+.font-size{
+  font-size: 15px;
 }
