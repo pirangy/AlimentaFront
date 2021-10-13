@@ -15,7 +15,7 @@
 }
 
 .font-tam {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .borda-texto{
@@ -77,4 +77,17 @@ ul.social-network li{
 .font-menu{
   font-family: Raleway;
   font-size: 18px;
+}
+
+.espacamento-texto-video{
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.espacamento-cards{
+  margin-top: 150px;
+  margin-bottom: 100px;}
+
+.margem-parceria{
+  margin-bottom: 150px;
 }

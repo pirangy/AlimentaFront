@@ -5,7 +5,7 @@
     aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+  <div class="collapse navbar-collapse ml-5 mr-3" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link text-light font-weight-bold font-menu" href="#txtvideo">Quem Somos</a>
@@ -59,22 +59,27 @@
 <!--jumbotron-->
 <div class="jumbotron jumbotron-fluid mb-0 cor-jumbo">
   <div class="container">
-    <h1 class="display-4 text-white font-italic font-raleway font-weight-bold"><u>Alimenta</u></h1>
-    <p class="lead text-white font-tam font-raleway">Unindo propósitos. Salvando vidas.</p>
+    <div class="row align-items-center">
 
+      <div class="col-md-8">
+        <p class="lead text-white font-tam font-raleway font-weight-bold">Unindo propósitos. Salvando vidas.</p>
+        <button class="btn btn-info btn-lg font-raleway cor-login font-weight-bold borda-btn shadow-sm"
+          routerLink='/cadastrar'>
+          Faça Parte
+        </button>
+      </div>
 
-    <button class="btn btn-info btn-lg font-raleway cor-login font-weight-bold borda-btn shadow-sm"
-      routerLink='/cadastrar'>
-      Faça Parte
-    </button>
-
+      <div class="col-md-4">
+        <img src="../../assets/img/Alimenta Logotipo (7).png" alt="" class="rounded-circle" width="350px">
+      </div>
+    </div>
   </div>
 </div>
 <!--/jumbotron-->
 
 <!--Carousel-->
 
-<div id="carouselExampleIndicators" class="carousel slide carousel-fade container mt-3 mb-5" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade container mt-5" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -121,8 +126,8 @@
 
 
 <!--texto e video-->
-<div class="container mt-5 mb-5">
-  <div class="row mt-5 mb-5" id="txtvideo">
+<div class="container espacamento-texto-video">
+  <div class="row" id="txtvideo">
     <div class="col-md-6">
       <h3 class="text-success">O que é a <u><em>Alimenta</em></u>?</h3>
       <p>
@@ -144,7 +149,7 @@
 <!--/texto e video-->
 
 <!--cards-->
-<div class="container mt-5">
+<div class="container espacamento-cards">
   <div class="card-deck justify-content-center" id="card">
 
     <div class="card border-light mb-3 shadow p-3 mb-5">
@@ -173,7 +178,7 @@
     </div>
     <div class="card mb-3 shadow p-3 mb-5">
       <img class="card-img-top" src="../../assets/img/valores.png" alt="valores">
-      <div class="card-body bg-light">
+      <div class="card-body">
         <h5 class="card-title text-success">Valores</h5>
         <p class="card-text">
           Lorem ipsum commodo tempor mollis arcu placerat curabitur ipsum sodales, senectus non orci eu at turpis felis
@@ -188,10 +193,10 @@
 <!--/cards-->
 
 <!--parceiro-->
-<div class="container d-flex justify-content-center mt-5 mb-5">
+<div class="container d-flex justify-content-center margem-parceria">
 
-  <div class="card bg-light border-light shadow mt-5">
-    <div class="card-body mt-5 mb-5" id="parceiro">
+  <div class="card bg-light border-light shadow">
+    <div class="card-body mt-5 mb-5 ml-5" id="parceiro">
       <div class="row align-items-center">
         <div class="col-md-6">
           <h3 class="text-success">Parceria</h3>
@@ -211,7 +216,7 @@
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-4 ml-3">
           <img src="../../assets/img/genn.jpg" alt="">
         </div>
       </div>
@@ -249,9 +254,8 @@
       </div>
     </div>
   </div>
-  <div class="footer-copyright bg-dark text-center py-3">
+  <div class="footer-copyright bg-secondary text-center py-3">
     <span class="text-light font-weight-bold"> © 2021 Copyright: Grupo 1</span>
   </div>
 </footer>
 <!--/rodape-->
-

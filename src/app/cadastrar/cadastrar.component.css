@@ -14,6 +14,13 @@
   font-weight: bold;
 }
 
+.borda-fonte {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #707070;
+  color: #F8F9FA;
+  font-weight: bold;
+}
+
 .cor-fundo {
   background-image: radial-gradient(
     circle at 37.72% 119.64%,
