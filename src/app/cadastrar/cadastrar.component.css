@@ -15,7 +15,17 @@
 }
 
 .cor-fundo {
-  background-color: #00B894;
+  background-image: radial-gradient(
+    circle at 37.72% 119.64%,
+    #d5f8a0 0,
+    #c5f7a2 12.5%,
+    #aff19f 25%,
+    #92e699 37.5%,
+    #6cd890 50%,
+    #3bc989 62.5%,
+    #00bf88 75%,
+    #00b88c 87.5%,
+    #00b495 100%);
   border-radius: 20px;
 }
 
