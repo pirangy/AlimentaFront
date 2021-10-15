@@ -13,3 +13,15 @@
 .cor-jumbo{
   background-color: #1abc9c;
 }
+
+mat-icon {
+  cursor: pointer;
+  font-size: 3rem;
+}
+  mat-icon:hover{
+    color:palevioletred;
+  }
+
+  mat-icon.liked {
+    color: palevioletred;
+  }
