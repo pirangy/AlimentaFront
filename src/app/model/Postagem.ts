@@ -9,4 +9,5 @@ export class Postagem {
   public dataHora: Date
   public usuario: User
   public tema: Tema
+  public liked: boolean
 }

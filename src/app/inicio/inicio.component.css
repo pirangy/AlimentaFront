@@ -32,7 +32,7 @@
   overflow: hidden;
   position: relative;
   /*display:flex;*/
-  
+
   justify-content: space-between;
   box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.05);
   transition: 2.5s cubic-bezier(.21,.04,.26,.99);
@@ -64,13 +64,18 @@
 .btn-icon {
   display: inline-block;
   width: 10px;
-  position: absolute;
+  /* position: absolute; */
   left: 1.5rem;
   transition: 1s cubic-bezier(.21,.04,.26,.99);
   transform: rotate(0deg)
 }
 
 .btn-like:hover .btn-icon {
+  color: var(--red);
+}
+
+.liked {
+  transition: transform 0.1s ease;
   color: var(--red);
 }
 
@@ -122,7 +127,8 @@
 }*/
 
 .liked .btn-content--default {
-  transform: translate(24px)
+  transform: translate(24px);
+  margin-left: 20px !important;
 }
 
 
