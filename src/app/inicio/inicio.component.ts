@@ -108,4 +108,7 @@ export class InicioComponent implements OnInit {
       })
     }
   }
+  liked(item:Postagem){
+    item.liked= !item.liked;
+  }
 }

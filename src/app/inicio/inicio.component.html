@@ -75,6 +75,22 @@
             <p class="card-text">{{item.texto}}.</p>
             <p class="card-text"><small class="text-muted">{{item.dataHora}}</small></p>
             <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+
+            <button class="btn btn-like" (click)="liked(item)"  >
+              <!-- <span *ngIf="!item.liked" class="btn-icon btn--icon-default">
+                  <span class="fa fa-heart">1</span>
+              </span> -->
+              <!-- <span *ngIf="item.liked" class="btn-icon btn--icon-liked">
+                  <span class="fa fa-heart">2</span>
+              </span> -->
+              <!-- <span *ngIf="!item.liked"  class="btn-content  btn-content--liked">
+                  Liked
+              </span> -->
+              <span [ngClass]="{'liked':item.liked}"  class="fa fa-heart btn-icon "></span>
+              <span class =" ml-3 btn-content btn-content--default" [ngClass]="{'liked':item.liked}">
+                  {{item.liked==true?'Liked':'Like'}}
+              </span>
+          </button>
           </div>
         </div>
       </div>
