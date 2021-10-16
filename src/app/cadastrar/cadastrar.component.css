@@ -1,5 +1,9 @@
+::ng-deep body {
+  background-color: #f5f6fa;
+}
+
 #img-cadastro{
-  background-image: url(../../assets/img/imagemCadastrar.jpg);
+  background-image: url(../../assets/img/img.png);
   min-height: 650px;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,4 +51,8 @@
 
 .font-size{
   font-size: 15px;
+}
+
+.font-raleway{
+  font-family: Raleway;
 }

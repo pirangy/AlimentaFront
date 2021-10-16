@@ -1,12 +1,12 @@
 <div class="container-fluid">
 
-  <div class="row d-flex align-items-center">
+  <div class="row">
 
     <div class="col-md-5 ml-4 mt-5">
-      <div class="row d-flex justify-content-center">
 
+      <div class="row container d-flex justify-content-center">
         <div class="col-md-9 cor-fundo shadow mt-4">
-          <h2 class="text-center font-raleway font-weight-bold mt-4" id="titulo">Cadastro</h2>
+          <h1 class="text-center font-raleway font-weight-bold mt-4" id="titulo">Cadastro</h1>
 
           <div class="container mb-4 form-group cor-fonte font-size">
             <label for="nome">Nome</label>
@@ -14,10 +14,10 @@
               placeholder="Seu nome">
             <label for="cnpj">CNPJ</label>
             <input [(ngModel)]='user.cnpj' class="form-control font-size mb-3" type="text" name="cnpj" id="cnpj"
-              placeholder=" digite o CNPJ (00.000.000/0000-00)">
+              placeholder=" Digite o CNPJ (00.000.000/0000-00)">
             <label for="usuario">Usuário</label>
-            <input [(ngModel)]='user.usuario' class="form-control font-size mb-3" type="text" name="usuario" id="usuario"
-              placeholder="Seu usuário">
+            <input [(ngModel)]='user.usuario' class="form-control font-size mb-3" type="text" name="usuario"
+              id="usuario" placeholder="Seu usuário">
             <label for="foto">Link da Foto</label>
             <input [(ngModel)]='user.foto' class="form-control font-size mb-3" type="text" name="foto" id="foto"
               placeholder="Link da sua foto">
@@ -25,11 +25,11 @@
             <input [(ngModel)]='user.email' class="form-control font-size mb-3" type="email" name="email" id="email"
               placeholder="email@exemplo.com">
             <label for="senha">Senha</label>
-            <input (input)='confirmSenha($event)' class="form-control font-size mb-3" type="password" name="senha" id="senha"
-              placeholder="Sua senha">
+            <input (input)='confirmSenha($event)' class="form-control font-size mb-3" type="password" name="senha"
+              id="senha" placeholder="Sua senha">
             <label for="confirmSenha">Confirmar Senha</label>
-            <input [(ngModel)]='user.senha' class="form-control font-size mb-3" type="password" name="confirmSenha" id="confirmSenha"
-              placeholder="Confirme sua senha">
+            <input [(ngModel)]='user.senha' class="form-control font-size mb-3" type="password" name="confirmSenha"
+              id="confirmSenha" placeholder="Confirme sua senha">
             <label for="tipo">Tipo de Usuário</label>
             <select class="form-control font-size mb-3" name="tipo" id="tipo" (change)='tipoUser($event)'>
               <option>Selecione um tipo de usuário</option>
@@ -49,8 +49,7 @@
         </div>
       </div>
     </div>
-
-    <div class="col-md-6" id="img-cadastro"></div>
+    <div class="col-md-6 d-flex justify-content-center" id="img-cadastro" width="950px" height="650px"></div>
 
   </div>
 </div>
