@@ -67,180 +67,186 @@
         </div>
       </div>
 
-<<<<<<< HEAD
       <div class="card-columns">
-        <div class="card text-center" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
-          <div class="card-body">
-            <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <small class="text-muted mb-3">Tema: {{item.tema.descricao}}</small>
-            <p class="card-text">{{item.texto}}.</p>
-            <p class="card-text"><small class="text-muted">{{item.dataHora}}</small></p>
-            <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+        <div class="card d-inline-block" id="cards_landscape_wrap-2"
+          *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+          <div class="card-flyer">
 
-            <button class="btn btn-like" (click)="liked(item)"  >
-              <!-- <span *ngIf="!item.liked" class="btn-icon btn--icon-default">
+            <div class="card-body">
+              <div class="image-box">
+                <img class="card-img-top mx-auto d-block" src="{{item.imagem}}" alt="Imagem de capa da postagem">
+              </div>
+              <h5 class="card-title m-0 mt-4">{{item.titulo}}</h5>
+              <small class="text-muted mb-3">Tema: {{item.tema.descricao}}</small>
+              <p class="card-text">{{item.texto}}.</p>
+              <p class="card-text"><small class="text-muted">{{item.dataHora}}</small></p>
+              <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+
+              <button class="btn btn-like" (click)="liked(item)">
+                <!-- <span *ngIf="!item.liked" class="btn-icon btn--icon-default">
                   <span class="fa fa-heart">1</span>
               </span> -->
-              <!-- <span *ngIf="item.liked" class="btn-icon btn--icon-liked">
+                <!-- <span *ngIf="item.liked" class="btn-icon btn--icon-liked">
                   <span class="fa fa-heart">2</span>
               </span> -->
-              <!-- <span *ngIf="!item.liked"  class="btn-content  btn-content--liked">
+                <!-- <span *ngIf="!item.liked"  class="btn-content  btn-content--liked">
                   Liked
               </span> -->
-              <span [ngClass]="{'liked':item.liked}"  class="fa fa-heart btn-icon "></span>
-              <span class =" ml-3 btn-content btn-content--default" [ngClass]="{'liked':item.liked}">
+                <span [ngClass]="{'liked':item.liked}" class="fa fa-heart btn-icon "></span>
+                <span class=" ml-3 btn-content btn-content--default" [ngClass]="{'liked':item.liked}">
                   {{item.liked==true?'Liked':'Like'}}
-              </span>
-          </button>
-=======
-      <div>
-        <div class="card-columns">
-          <div class="card d-inline-block" id="cards_landscape_wrap-2"
-            *ngFor='let item of listaPostagens | orderBy : key : reverse'>
-            <div class="card-flyer">
-              <div class="card-body">
-                <div class="image-box">
-                  <img class="card-img-top mx-auto d-block" src="{{item.imagem}}" alt="Imagem de capa da postagem">
-                </div>
-                <h5 class="card-title mt-3">{{item.titulo}}</h5>
-                <small class="text-muted mb-3">Tema: {{item.tema.descricao}}</small>
-                <p class="card-text">{{item.texto}}.</p>
-                <p class="card-text"><small class="text-muted">{{item.dataHora}}</small></p>
-                <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
-
-                <button class="btn btn-like">
-                  <span class="btn-icon btn--icon-default">
-                    <span class="fa fa-heart"></span>
-                  </span>
-                  <span class="btn-icon btn--icon-liked">
-                    <span class="fa fa-heart"></span>
-                  </span>
-                  <span class="btn-content  btn-content--liked">
-                    Liked
-                  </span>
-                  <span class="btn-content btn-content--default">
-                    Like
-                  </span>
-                </button>
-              </div>
+                </span>
+              </button>
             </div>
->>>>>>> curtidas-descurtidas
           </div>
         </div>
       </div>
     </div>
-      <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
 
-        <div class="card-columns">
-          <div class="card text-center" *ngFor='let item of user.postagem | orderBy : key : reverse'>
+    <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+
+      <div class="card-columns">
+
+        <div class="card d-inline-block" id="cards_landscape_wrap-2"
+          *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+          <div class="card-flyer">
             <div class="card-body">
-              <img class="card-img-top" src="{{item.imagem}}" alt="Imagem de capa da postagem">
-              <h5 class="card-title m-0">{{item.titulo}}</h5>
+
+              <div class="image-box">
+                <img class="card-img-top mx-auto d-block" src="{{item.imagem}}" alt="Imagem de capa da postagem">
+              </div>
+
+              <h5 class="card-title m-0 mt-4">{{item.titulo}}</h5>
               <small class="text-muted mb-3">Tema: {{item.tema.descricao}}</small>
               <p class="card-text">{{item.texto}}.</p>
               <p class="card-text"><small class="text-muted">{{item.dataHora}}</small></p>
 
-              <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-              <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+              <div class="row justify-content-center">
+                <button [routerLink]="['/postagem-edit', item.id]" type="button" class="btn btn-outline-info mr-2">
+                  Editar
+                </button>
+  
+                <button [routerLink]="['/postagem-delete', item.id]"  type="button" class="btn btn-outline-danger shadow font-raleway justify-content-center">
+                  Apagar
+                </button>
+              </div>
+              
             </div>
           </div>
         </div>
 
       </div>
+    </div>
 
-      <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+    <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
 
-        <div class="row d-flex justify-content-center mt-5 mb-5">
-          <div class="col-md-4">
-            <div class="form-group">
-              <input type="text" class="form-control" id="titulo" placeholder="Pesquise um tema" [(ngModel)]="nomeTema"
-                (keyup)='findByNomeTema()'>
-            </div>
+      <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" id="titulo" placeholder="Pesquise um tema" [(ngModel)]="nomeTema"
+              (keyup)='findByNomeTema()'>
           </div>
         </div>
+      </div>
 
 
-        <div class="card-columns" *ngFor='let tema of listaTemas'>
-          <div class="card text-center" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
+      <div class="card-columns" *ngFor='let tema of listaTemas'>
+
+        <div class="card d-inline-block" id="cards_landscape_wrap-2"
+          *ngFor='let item of tema.postagem | orderBy : key : reverse'>
+
+          <div class="card-flyer">
             <div class="card-body">
               <img class="card-img-top" src="{{item.imagem}}" alt="Imagem de capa da postagem">
-              <h5 class="card-title m-0">{{item.titulo}}</h5>
+              <h5 class="card-title m-0 mt-4">{{item.titulo}}</h5>
               <p class="card-text">{{item.texto}}.</p>
               <p class="card-text"><small class="text-muted">{{item.dataHora}}</small></p>
 
               <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+
+              <button class="btn btn-like" (click)="liked(item)">
+                <!-- <span *ngIf="!item.liked" class="btn-icon btn--icon-default">
+                  <span class="fa fa-heart">1</span>
+              </span> -->
+                <!-- <span *ngIf="item.liked" class="btn-icon btn--icon-liked">
+                  <span class="fa fa-heart">2</span>
+              </span> -->
+                <!-- <span *ngIf="!item.liked"  class="btn-content  btn-content--liked">
+                  Liked
+              </span> -->
+                <span [ngClass]="{'liked':item.liked}" class="fa fa-heart btn-icon "></span>
+                <span class=" ml-3 btn-content btn-content--default" [ngClass]="{'liked':item.liked}">
+                  {{item.liked==true?'Liked':'Like'}}
+                </span>
+              </button>
+
+
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-    
-  </div>
-</div>
-  <!--/Cards-->
 
-  <!--/Tabs-->
-  <!--/Visualização de Postagens-->
+      <!--/Cards-->
 
-  <!-- Modal -->
-  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-    aria-hidden="true">
+      <!--/Tabs-->
+      <!--/Visualização de Postagens-->
 
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
+      <!-- Modal -->
+      <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
 
-          <div class="form-group">
-            <label for="titulo">Título</label>
-            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
-              placeholder="Mínimo de 6 caracteres">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div class="form-group">
+                <label for="titulo">Título</label>
+                <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+                  placeholder="Mínimo de 6 caracteres">
+              </div>
+
+              <div class="form-group">
+                <label for="texto">Texto</label>
+                <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"
+                  placeholder="Escreva sobre sua causa e não esqueça de colocar suas informações de contato. Mínimo de 20 caracteres">></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="titulo">Imagem</label>
+                <input [(ngModel)]='postagem.imagem' type="text" class="form-control" id="imagem"
+                  placeholder="Insira o link de uma imagem ilustrativa">
+              </div>
+
+
+              <div class="form-group">
+                <label for="tema">Escolha um tema ou <a routerLink='/tema' data-dismiss="modal">cadastre um
+                    novo</a>:</label>
+                <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                  <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                    {{item.descricao}}
+                  </option>
+                </select>
+              </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">
+                Publicar
+              </button>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="texto">Texto</label>
-            <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"
-              placeholder="Escreva sobre sua causa e não esqueça de colocar suas informações de contato. Mínimo de 20 caracteres">></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="titulo">Imagem</label>
-            <input [(ngModel)]='postagem.imagem' type="text" class="form-control" id="imagem"
-              placeholder="Insira o link de uma imagem ilustrativa">
-          </div>
-
-
-          <div class="form-group">
-            <label for="tema">Escolha um tema ou <a routerLink='/tema' data-dismiss="modal">cadastre um
-                novo</a>:</label>
-            <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
-              <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                {{item.descricao}}
-              </option>
-            </select>
-          </div>
-
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">
-            Cancelar
-          </button>
-          <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">
-            Publicar
-          </button>
         </div>
       </div>
-    </div>
-<<<<<<< HEAD
-  </div>
-</div>
-=======
-  </div>
->>>>>>> curtidas-descurtidas
